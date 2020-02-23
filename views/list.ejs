@@ -1,0 +1,39 @@
+<%- include("header");-%>
+
+<div class="upper">
+  <div class="upper-left">
+      <h1>To-do list</h1>
+  </div>
+<div class="upper-right">
+    <h3><%-greetings%></h3>
+</div>
+</div>
+
+    <br>
+    <div class="box" id="heading">
+        <h2><%= listTitle %></h2>
+
+    </div>
+
+<div class="box">
+  <!-- <ul> -->
+
+  <% for (var i = 0; i < x.length; i++){ %>
+    <div class="item">
+      <!-- <div class="kay2"> -->
+      <input type="checkbox">
+      <p><%= x[i] %></p>
+    <!-- </div> -->
+<!-- <div class="kay"> -->
+    <!-- <button type="button" name="delete">-</button> -->
+<!-- </div> -->
+    </div>
+    <% }%>
+    <form class="item" action="/" method="post">
+          <input type="text" name="newItem" placeholder="add todo item" autocomplete="off" required>
+          <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+   <!-- </ul> -->
+</div>
+
+<%- include("footer")-%>
