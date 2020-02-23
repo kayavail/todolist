@@ -118,7 +118,7 @@ app.post("/", function(req, res) {
     homeList.push(todo)
     res.redirect("/home")
   } else {
-    todosArr.unshift(todo)
+    todosArr.push(todo)
     res.redirect("/")
 
   }
